@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const left = document.createElement("div")
+    const right = document.createElement("div")
+    const body = document.querySelector("body")
+
+    body.style.display = "flex"
+    body.style.margin = "0"
+    left.style.width = "50%"
+    right.style.width = "50%"
+    left.style.height = "100vh"
+    right.style.height = "100vh"
+    left.style.backgroundColor = "blue"
+    right.style.backgroundColor = "red"
+
+
+    left.innerText = left.style.width
+    right.innerText = right.style.width
+
+    body.appendChild(left)
+    body.appendChild(right)
+
+    left.addEventListener("click", function click(){
+        addWidth(left, right)
+    } 
+        )
+    function tap(element1, element2) {
+        count = parseInt(element1.style.width) + 1 
+        element2.style.width = Number(element2.style.width) - 1
+        console.log(element1, element2)
+        element1.style.width = '$(count)%'
+        element2.style.width
+        console.log(element.style.width)
+    }
+    </script>
+</body>
+
+</html>
